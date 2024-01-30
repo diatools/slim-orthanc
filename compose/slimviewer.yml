@@ -1,0 +1,10 @@
+services:
+  slimviewer:
+    image: wsi4dicom
+    build:
+      context: ../slim
+      dockerfile: Dockerfile.wsi4dicom
+    depends_on:
+      - orthanc
+    ports:
+      - 80

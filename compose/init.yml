@@ -1,0 +1,12 @@
+services:
+  createbuckets:
+    image: minio/mc
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc config host add storage http://minio:9000 demo demodemo;
+      /usr/bin/mc mb storage/wsi-storage;
+      /usr/bin/mc mb storage/orthanc;
+      /usr/bin/mc alias set storage http://minio:9000 demo demodemo;
+      "

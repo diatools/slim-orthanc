@@ -1,0 +1,12 @@
+services:
+  orthanc:
+    ports:
+      - 8042:8042
+  
+  slimviewer:
+    ports:
+      - 8000:80
+
+  minio:
+    ports: 
+      - 9000:9000

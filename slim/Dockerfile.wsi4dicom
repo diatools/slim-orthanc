@@ -1,0 +1,5 @@
+FROM nginx:latest
+
+WORKDIR /usr/share/nginx/html
+COPY --from=slim-app /usr/local/share/mghcomputationalpathology/slim/build  .
+COPY dicomweb.conf /etc/nginx/conf.d/default.conf
