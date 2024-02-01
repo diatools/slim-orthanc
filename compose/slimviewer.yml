@@ -1,6 +1,6 @@
 services:
   slimviewer:
-    image: wsi4dicom
+    image: ghcr.io/diatools/slim-orthanc:latest 
     build:
       context: ../slim
       dockerfile: Dockerfile.wsi4dicom

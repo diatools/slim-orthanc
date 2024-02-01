@@ -24,7 +24,11 @@ The compose files are organized as follows:
 - 8000 slimviewer ui
 - 9000 minio
 
-## Build the Slim-Viewer Docker-Image
+## Launch
+
+Start the application with: `docker compose up -d --force-recreate --remove-orphans`
+
+## Build the Slim-Viewer Docker-Image for changes
 
 1. Clone slim
     ```
